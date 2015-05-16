@@ -13,7 +13,8 @@ var opts = {
 var camera = new RaspiCam({
   mode: "photo",
 	output: "./images/pic.jpg",
-	encoding: "jpg"
+	encoding: "jpg",
+  timeout:0
 });
 
 
