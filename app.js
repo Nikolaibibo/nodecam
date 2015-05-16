@@ -1,5 +1,6 @@
 var RaspiCam = require("raspicam");
 
+/*
 var opts = {
   mode: 'photo',
   output: '/home/pi/nodejs/nodecam/test.jpg',
@@ -7,8 +8,14 @@ var opts = {
   height: '600',
   quality: '80'
 }
+*/
 
-var camera = new RaspiCam(opts);
+var camera = new RaspiCam({
+  mode: "photo",
+	output: "./image.jpg",
+	encoding: "jpg",
+	timeout: 0 // take the picture immediately
+});
 
 
 camera.start();
