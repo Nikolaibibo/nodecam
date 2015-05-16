@@ -14,7 +14,7 @@ var camera = new RaspiCam({
   mode: "photo",
 	output: "./images/pic.jpg",
 	encoding: "jpg",
-	timeout: 0 // take the picture immediately
+	timeout: 1000 // take the picture immediately
 });
 
 
