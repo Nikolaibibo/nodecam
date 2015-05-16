@@ -27,6 +27,7 @@ camera.on("read", function( err, timestamp, filename ){
 
 camera.on("exit", function( timestamp ){
 	console.log("photo child process has exited at " + timestamp );
+  camera.stop();
 });
 
 camera.start();
