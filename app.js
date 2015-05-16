@@ -18,25 +18,16 @@ var camera = new RaspiCam({
 });
 
 
+camera.on("started", function( err, timestamp ){
+	console.log("photo started at " + timestamp );
+});
+
+camera.on("read", function( err, timestamp, filename ){
+	console.log("photo image captured with filename: " + filename );
+});
+
+camera.on("exit", function( timestamp ){
+	console.log("photo child process has exited at " + timestamp );
+});
+
 camera.start();
-camera.stop();
-
-//listen for the "start" event triggered when the start method has been successfully initiated
-camera.on("start", function(){
-  console.log("starting cam");
-});
-
-//listen for the "read" event triggered when each new photo/video is saved
-camera.on("read", function(err, timestamp, filename){
-  console.log("reading cam");
-});
-
-//listen for the "stop" event triggered when the stop method was called
-camera.on("stop", function(){
-  console.log("stopping cam");
-});
-
-//listen for the process to exit when the timeout has been reached
-camera.on("exit", function(){
-  console.log("exiting cam");
-});
