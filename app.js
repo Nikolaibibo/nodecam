@@ -2,7 +2,7 @@ var RaspiCam = require("raspicam");
 
 var opts = {
   mode: 'photo',
-  output: '/home/pi/camera/test.jpg',
+  output: './test.jpg',
   width: '800',
   height: '600',
   quality: '80'
