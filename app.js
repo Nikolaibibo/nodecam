@@ -8,7 +8,7 @@ var opts = {
   quality: '80'
 }
 
-var camera = new RaspiCam({ opts });
+var camera = new RaspiCam(opts);
 
 
 camera.start();
