@@ -31,3 +31,4 @@ camera.on("exit", function( timestamp ){
 });
 
 camera.start();
+camera.stop();
